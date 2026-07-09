@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Vicente | 3D Crane</title>
+    <link rel="stylesheet" href="styles.css">
+	
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Slab:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+	
+</head>
+<body>
+
+
+
+
+<section class="case-study-detail">
+    <h2 class="case-study-title">A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction</h2>
+    
+
+
+	<div class="case-study-authors">
+    <span>
+        <a href="Home.html">
+            J. Vicente Martínez
+        </a> <sup>1</sup>
+    </span>
+    <span>
+        <a href="https://webdiis.unizar.es/~ramirlab/" target="_blank" rel="noopener noreferrer">
+            É. Ramírez Laboreo
+        </a> <sup>1</sup>
+    </span>
+</div>
+	
+	<div class="case-study-authors-afiliaciones">
+        <i>1. Departamento de Informática e Ingeniería de Sistemas (DIIS) e Instituto de Investigación en Ingeniería de Aragón (I3A), Universidad de Zaragoza</i> <br>         
+    </div>
+	
+	
+	
+	
+	<div class="download-banner">
+    <div class="download-text">
+        <p><strong>Crane3DSim | 3D Crane dynamics simulator</strong> - <i> Project code for Matlab simulation available on GitHub </i>
+    </div>
+    <a href="https://github.com/jrgvicente/Crane3DSim" target="_blank" class="github-btn" download> <img src="images/icons/github_blanco.svg" alt="Github" /> <p>GitHub</p></a>
+	<a href="pdfs/Crane3DSim_Guide.pdf" target="_blank" class="github-btn" download>  <p>Documentation</p></a>
+	
+	</p>
+	</div>
+
+	
+		<div class="download-banner">
+    <div class="download-text">
+        <p>
+            Vicente-Martinez, J. and Ramirez-Laboreo, E. (2025) 
+            <strong>A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction.</strong> 
+            <i>Zenodo</i>
+			
+			
+			<p>
+				<i><a href="#cite1">How to cite</a></i>
+			</p>
+			
+			<!-- Modal -->
+			<div id="cite1" class="modal">
+			  <div class="modal-content">
+				<a href="#" class="close">&times;</a>
+				<h3>A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction</h3>
+				<p>BibTeX cite</p>
+<pre class="bibtex-entry">
+@misc{vicentemartinez2026hybriddynamicmodelparameter,
+      title={A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction}, 
+      author={Jorge Vicente-Martinez and Edgar Ramirez-Laboreo},
+      year={2026},
+      eprint={2509.13330},
+      archivePrefix={arXiv},
+      primaryClass={eess.SY},
+      url={https://arxiv.org/abs/2509.13330}, 
+}
+</pre>
+			  </div>
+			</div>
+			
+			
+        </p>
+    </div>
+    <div class="download-botones">
+	
+	<a href="https://doi.org/10.5281/zenodo.17043987" target="_blank" class="download-btn" download>Preprint [ENG]</a> <br>	 
+	</div>
+</div>
+	
+	<div class="case-study-gallery">
+        <img src="images/3DCRANEmodel/movgrua.gif" alt="Animación del simulador ">
+		<img src="images/3DCRANEmodel/experimentalCRANE2.png" alt="Maqueta de la grúa">
+        
+    </div>
+	
+	
+	
+	<h3 class="case-study-subtitle">Abstract</h3>
+	
+	
+	<div class="resumen-proyecto">        
+		<p>This paper presents a new approach to <b>accurately simulating 3D overhead cranes with friction.</b> Although nonlinear friction dynamics has a significant impact on these systems, accurately modeling this phenomenon in simulations is a significant challenge. Traditional methods often rely on imprecise approximations of friction or require excessive computational times for reliable results. To address this, we present a hybrid dynamical model that features a trade-off between high-fidelity friction modeling and computational efficiency. Furthermore, we present a step-by-step algorithm for the comprehensive <b>estimation of all unknown system parameters, including friction.</b> This methodology is based on Bayesian Linear Regression and Least Squares (LS) estimations. Finally, experimental validation with a laboratory crane confirms the effectiveness of the proposed modeling and estimation approach.  </p>
+	</div>
+	
+	<h3 class="case-study-subtitle">Hybrid simulation model</h3>
+	
+	<div class="resumen-proyecto">        
+		<p>To address the numerical issues caused by the dry friction simulation and to easily incorporate the dependence of friction on the direction of motion and position we propose the use of a hybrid simulation model with three distinct
+motion states for each axis of movement (negative direction motion, no-motion, and positive direction-motion). </p>
+	</div>
+
+		 	<div class="video-container">
+    <video autoplay loop muted playsinline controls>
+        <source src="videos/crane_model_3d_estados.mp4" type="video/mp4">
+        Tu navegador no soporta vídeo HTML5.
+    </video>
+	</div>	
+	
+		<h3 class="case-study-subtitle">Parameter estimation</h3>
+		
+	<div class="resumen-proyecto">        
+		<p>Our estimation strategy proposes a multi-step method that separates the estimation of dry friction functions using Bayesian Linear Regression from the LS estimation of the parameters.</p>
+	</div>
+		
+			<div class="case-study-gallery">
+        <img src="images/3DCRANEmodel/parameter_estimation_esquema.png" alt="Esquema estimacion ">
+		<img src="images/3DCRANEmodel/parameter_estimation_fseca.png" alt="Fseca">
+        
+    </div>
+	
+	
+	<h3 class="case-study-subtitle">Experimental results</h3>
+	
+	<div class="resumen-proyecto">        
+		<p>To validate the parametric estimation process and the simulator model, we conducted various experiments by exciting motion along the three axes with signals of different frequencies. The results show high fidelity, with the outputs of the simulator closely matching the experimental data, thereby confirming the accuracy of the model in replicating the behavior of the system under these conditions.</p>
+	</div>
+	
+	<div class="case-study-gallery1">
+		<img src="images/3DCRANEmodel/model_results.png" alt="Resultados">
+	</div>
+		
+
+&nbsp
+	
+<hr>
+<div class="case-study-funding">
+    <p>
+        This work is part of the project NoRMMAS PID2024-159279OB-I00, funded by
+    </p>
+
+    <img src="images/logos/MICIU+Cofinanciado+AEI.jpg" alt="Funding logo">
+
+    <p>
+      It was founded also in part by the MICIU through the grant FPU24/01878, in part by the Government of Aragón - EU, via grant T45_23R and in part
+by Fundación Ibercaja and the University of Zaragoza, via grant JIUZ2023-IA-07.
+</div>
+
+</section>
+
+
+<footer>
+    <p>Jorge Vicente | &copy; 2026</p>
+</footer>
+
+</body>
+</html>

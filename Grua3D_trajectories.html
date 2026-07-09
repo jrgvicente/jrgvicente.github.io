@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Vicente | 3D Crane</title>
+    <link rel="stylesheet" href="styles.css">
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Slab:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+
+	
+</head>
+<body>
+
+
+
+
+<section class="case-study-detail">
+    <h2 class="case-study-title">Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance</h2>
+    
+
+
+	<div class="case-study-authors">
+    <span>
+        <a href="Home.html">
+            J. Vicente Martínez
+        </a> <sup>1</sup>
+    </span>
+    <span>
+        <a href="https://webdiis.unizar.es/~ramirlab/" target="_blank" rel="noopener noreferrer">
+            É. Ramírez Laboreo
+        </a> <sup>1</sup>
+    </span>
+</div>
+	
+	<div class="case-study-authors-afiliaciones">
+        <i>1. Departamento de Informática e Ingeniería de Sistemas (DIIS) e Instituto de Investigación en Ingeniería de Aragón (I3A), Universidad de Zaragoza</i> <br>         
+    </div>
+	
+	
+	
+	 <div class="download-banner">
+    <div class="download-text">
+        <p>
+            Vicente-Martinez, J. and Ramirez-Laboreo, E. (2025) 
+            <strong>Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance.</strong> 
+            <i>Arxiv</i>
+			
+			
+			<p>
+				<i><a href="#cite2">How to cite</a></i>
+			</p>
+			
+			<!-- Modal -->
+			<div id="cite2" class="modal">
+			  <div class="modal-content">
+				<a href="#" class="close">&times;</a>
+				<h3>Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance</h3>
+				<p>BibTeX cite</p>
+<pre class="bibtex-entry">
+@misc{vicentemartinez2025flatnessbasedtrajectoryplanning3d,
+      title={Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance}, 
+      author={Jorge Vicente-Martinez and Edgar Ramirez-Laboreo},
+      year={2025},
+      eprint={2510.24457},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2510.24457}, 
+}
+</pre>
+			  </div>
+			</div>
+			
+			
+        </p>
+    </div>
+    <div class="download-botones">
+	
+	<a href="https://arxiv.org/abs/2510.24457" target="_blank" class="download-btn" download>Preprint [ENG]</a> <br>	 
+	</div>
+</div>
+		
+	
+
+<div class="info-box orange">
+    <img src="images/icons/conferencia.svg" alt="Conference icon">
+    <p>
+        This work has been accepted for presentation at the <strong>23rd IFAC World Congress 2026 in Busan, Korea.</strong>
+    </p>
+</div>
+		
+
+		
+		
+		<h3 class="case-study-subtitle">Abstract</h3>
+		
+		<div class="resumen-proyecto">        
+		<p>This paper presents an optimal trajectory generation method for 3D overhead cranes by leveraging differential flatness. This framework enables the direct inclusion of complex physical and dynamic constraints, such as nonlinear friction and collision avoidance for both payload and rope. Our approach allows for aggressive movements by constraining payload swing only at the final point. A comparative simulation study validates our approach, demonstrating that neglecting dry friction leads to actuator saturation and collisions. The results show that friction modeling is a fundamental requirement for fast and safe crane trajectories. 
+		</p>
+	</div>
+
+	   
+
+
+
+
+<h3 class="case-study-subtitle">Trajectory optimization</h3>
+
+<div class="resumen-proyecto">
+        <p>By exploiting the <b>differential flatness</b> of the 3D overhead crane, we map the full system dynamics (including underactuated states) to a flat output space defined by the payload position. This mathematical transformation allows us to formulate trajectory planning as a constrained optimization problem where complex behaviors are easily integrated:</p>
+        <ul>
+            <li><b>Friction-Aware Planning:</b> We incorporate nonlinear friction models (including Coulomb and viscous friction) directly into the optimization. This ensures the planned trajectories are physically feasible and avoid actuator saturation.</li>
+            <li><b>Dual Collision Avoidance:</b> Unlike traditional methods that only consider the payload center, our algorithm monitors potential collisions for both the <b>rope and the payload</b>.</li>
+            
+        </ul>
+		<p>Unlike traditional approaches that strictly limit the payload swing angle to avoid instability, our method actively controls the oscillation to fully exploit the system's dynamics. By leveraging differential flatness, the optimizer can plan more aggressive and efficient movements. This strategy allows the crane to move at higher speeds while mathematically guaranteeing that the payload reaches its destination with zero residual oscillation, effectively "cancelling" the swing exactly at the target point.</p>
+    </div>
+
+	<div class="case-study-gallery">
+	    <img src="images/3DCRANEifac/obstac_rope.png" alt="Colision cuerda obstaculos">
+        <img src="images/3DCRANEifac/limitedVScontrolled.png" alt="Limited oscilation vs controlled oscilation ">		       
+    </div>
+
+	<div class="case-study-gallery1">
+		<img src="images/3DCRANEifac/RRT.png" alt="Esquema RRT">
+	</div>
+
+
+
+<h3 class="case-study-subtitle">Control diagram</h3>
+
+<div class="resumen-proyecto">
+        <p>Typically, in industrial environments, only the trolley’s position and the rope length are controlled. For that reason, the optimized flat output trajectories are mapped to generate the target paths for the actuated coordinates and the corresponding feedforward control action. We implement a control strategy that combines the optimized feedforward action with a standard feedback term with three independent PI controllers with anti-windup, one for each actuated axis, which track the specified target paths for the trolley and rope.</p>
+    </div>
+
+
+	<div class="case-study-gallery1">
+		<img src="images/3DCRANEifac/esquema_completo_ENG.png" alt="Esquema RRT">
+	</div>
+
+
+
+<h3 class="case-study-subtitle">Simulation results</h3>
+
+<div class="resumen-proyecto">
+    <p>The influence of the planning model is evaluated based on three key performance indicators to ensure safe and efficient crane operation:</p>
+    
+    <ul>
+        <li><strong>Collision Avoidance:</strong> Monitoring both the payload and the rope to ensure they clear all obstacles throughout the entire path.</li>
+        <li><strong>Final Trajectory Time</strong> </li>
+        <li><strong>Residual Payload Oscillation:</strong> Quantified as the maximum displacement of the payload from its final resting position after the trolley stops.</li>
+    </ul>
+
+    <p>The primary operational goal is to achieve <strong>zero final swing without collisions</strong>. To demonstrate the necessity of accurate friction modeling, we compare trajectories generated using three dynamic models of varying complexity, all starting from the same calculated initial guess.</p>
+</div>
+
+
+	<div class="case-study-gallery">
+	    <img src="images/3DCRANEifac/traj_crane.png" alt="Generacion trayectorias grua 1">
+        <img src="images/3DCRANEifac/obstacleNFM.gif" alt="Animación del simulador ">		       
+    </div>
+
+
+
+
+
+&nbsp
+	
+<hr>
+<div class="case-study-funding">
+    <p>
+        This work is part of the project NoRMMAS PID2024-159279OB-I00, funded by
+    </p>
+
+    <img src="images/logos/MICIU+Cofinanciado+AEI.jpg" alt="Funding logo">
+
+    <p>
+      It was founded also in part by the MICIU through the grant FPU24/01878, in part by the Government of Aragón - EU, via grant T45_23R.
+</div>	
+
+
+</section>
+
+
+<footer>
+    <p>Jorge Vicente | &copy; 2026</p>
+</footer>
+
+</body>
+</html>

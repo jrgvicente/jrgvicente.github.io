@@ -1,0 +1,1035 @@
+/* ============================================================
+   RESET Y ESTILOS GENERALES
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif; /* Roboto Normal */
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+body a {
+	color: #3498DB; /* Color de los enlaces */
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+
+/* ============================================================
+   HEADER PRINCIPAL Y DE PROYECTOS
+   ============================================================ */
+.principal-header {
+    position: relative;
+    background-image: url('header.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    height: 200px;
+    width: 100%;
+	font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+.principal-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+.principal-header h1, .principal-header p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+/* Header de proyectos */
+.proyecto-header {
+    position: relative;
+    background-image: url('header2.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 3px 10px;
+    height: 53px;
+    width: 100%;
+	font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+.proyecto-header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+.proyecto-header h1, .proyecto-header p, .proyecto-header a {
+    position: relative;
+	color: white;
+    z-index: 1;
+    margin: 0;
+}
+
+
+/* ============================================================
+   MENÚ DE NAVEGACIÓN
+   ============================================================ */
+.principal-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #34495E;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+.principal-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 7px 20px;
+    margin: 5px;
+    transition: background 0.3s;
+}
+.principal-nav a:hover { background-color: #3498DB; }
+
+/* Menú de proyectos */
+.proyecto-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #34495E;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+}
+.proyecto-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 20px;
+    margin: 5px;
+    transition: background 0.3s;
+}
+.proyecto-nav a:hover { background-color: #3498DB; }
+
+
+/* ============================================================
+   SECCIONES Y TITULOS
+   ============================================================ */
+section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Estilo de títulos */
+h2, h3 {
+    font-size: 24px;
+    color: #2C3E50;
+    margin-bottom: 5px;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 600; /* Medium 500 */
+}
+.case-study-detail h3 { text-align: center; }
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #2C3E50;
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+
+/* ============================================================
+   LISTAS
+   ============================================================ */
+ul { list-style-type: none; padding-left: 0; }
+ul li { margin: 10px 0; }
+ul li a {
+    text-decoration: none;
+    color:#3498DB;
+    font-weight: bold;
+}
+ul li a:hover { text-decoration: underline; }
+
+
+/* ============================================================
+   REDES SOCIALES
+   ============================================================ */
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+}
+.social-icons img {
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.social-icons a:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+/* ============================================================
+   TARJETAS DE PROYECTOS
+   ============================================================ */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Tarjeta de proyecto */
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.project-card p {
+	text-align: justify;
+	margin-right: 25px;
+}
+
+/* Estado del proyecto */
+.project-status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    color: white;
+    text-transform: uppercase;
+	margin-left: 15px;
+}
+.finished { background: #3498DB; }
+.ongoing { background: #E67E22; }
+
+/* Título del proyecto */
+.project-title {
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    background-color: #f7f7f7;
+    text-align: left;
+}
+.project-title:hover { color: #3498DB; }
+
+/* Contenido del proyecto */
+.project-content {
+    display: flex;
+    padding: 15px;
+}
+.project-image {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 15px;
+}
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.project-video {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 15px;
+}
+.project-video video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+
+
+.project-summary { flex: 2; }
+.project-summary p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+/* Pills / botones de proyectos */
+.project-links {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project-pill {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #eef3f8;
+    color: #2C3E50;
+    text-decoration: none;
+    border: 1px solid #d0dbe5;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.project-pill:hover {
+    background-color: #3498DB;
+    color: white;
+    border-color: #3498DB;
+}
+
+
+/* ============================================================
+   RESPONSIVE: TARJETAS DE PROYECTOS
+   ============================================================ */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .project-summary {
+        flex: unset;
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+
+
+/* ============================================================
+   PUBLICACIONES
+   ============================================================ */
+.publication { margin-bottom: 20px; }
+
+.publication-number {
+    font-weight: bold;
+    color: #3498DB;
+    margin-right: 10px;
+}
+.publication-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+.publication-title a {
+    color: #333;
+    text-decoration: none;
+}
+.publication-title a:hover { color: #3498DB; }
+
+.publication-translation {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+.publication-authors,
+.publication-journal {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+.publication-doi {
+    font-size: 14px;
+    color:#3498DB;
+}
+.publication-doi a { text-decoration: none; }
+.publication-doi a:hover { color: #17a085; }
+
+.publication-enlaces { font-size: 14px; }
+.publication-enlaces a { text-decoration: none; }
+.publication-enlaces a:hover { color: #17a085; }
+
+
+/* ============================================================
+   CASE STUDY (DETALLES DE PROYECTO)
+   ============================================================ */
+.case-study-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.case-study-title {
+    font-size: 35px;
+    font-weight: 300;
+    color: #2C3E50;
+    text-align: center;
+	font-family: 'Roboto Slab', serif;
+    margin-bottom: 30px;
+}
+
+.case-study-subtitle {
+    font-size: 27px;
+    font-weight: 300;
+    color: #2C3E50;
+    text-align: center;
+	font-family: 'Roboto Slab', serif;
+	margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+/* Autores */
+.case-study-authors {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 3px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.case-study-authors span {
+    flex: 1;
+    text-align: center;
+}
+.case-study-authors-afiliaciones {
+    font-size: 14px;    
+    color: #333;
+    margin-top: 3px;
+    text-align: center;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Enlaces en autores: estilo académico */
+.case-study-authors a {
+    color: inherit;          /* mismo color que el texto (#333) */
+    text-decoration: none;   /* sin subrayado */
+}
+
+.case-study-authors a:hover {
+    color: #3498DB;          /* azul al pasar el ratón */
+    text-decoration: underline;
+}
+
+/* Galería 2 imagenes*/
+.case-study-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+/* .case-study-gallery img { */
+    /* max-width: 45%; */
+    /* height: auto; */
+    /* border-radius: 5px; */
+/* } */
+
+.case-study-gallery img {
+    max-width: 48%;
+    width: 100%;        /* ocupa su contenedor */
+    height: auto;       /* 👈 mantiene proporción */
+    object-fit: contain; /* 👈 extra seguridad */
+    border-radius: 5px;
+}
+
+
+/* Galería 1 imagenes*/
+.case-study-gallery1 {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.case-study-gallery1 img {
+    max-width: 95%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/* ============================================================
+   RESPONSIVE: GALERÍA DE IMÁGENES
+   ============================================================ */
+@media (max-width: 768px) {
+    .case-study-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .case-study-gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+/* Más info */
+.case-study-masinfo {
+    display: flex;
+    padding: 15px;
+}
+.case-study-masinfo img {
+    height: 30px;
+	margin-right: 15px;
+}
+.case-study-masinfo p { margin-top: 5px; }
+
+/* Descripción */
+.resumen-proyecto {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #444;
+	text-align: justify;
+	margin-bottom: 35px;
+	margin-top: 35px;
+}
+.case-study-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+	text-align: justify;
+}
+.case-study-description h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    color:#3498DB;
+}
+.case-study-description p, 
+.case-study-description ul {
+    margin-bottom: 15px;
+}
+.case-study-description ul { padding-left: 20px; }
+.case-study-description li { margin-bottom: 5px; }
+
+
+/* ============================================================
+   BANNERS DE DESCARGA
+   ============================================================ */
+.download-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeeeee;
+    padding: 15px;
+    margin: 30px 0;
+    border-radius: 8px;
+    color: black;
+    gap: 20px;
+}
+.download-text { flex: 1; }
+.download-text p {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
+/* Botones */
+.download-btn {
+    display: inline-block;
+    background-color: #3498DB;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px 9px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.download-btn:hover { background-color: #16A085; }
+
+.github-btn {
+    display: flex;
+	background-color: #4f4f4f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px 9px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.github-btn img {
+    width: 32px;
+    height: auto;
+	margin-left: 2px;
+	margin-right: 10px;
+}
+.github-btn p { margin-top: 4px; }
+.github-btn:hover { background-color: #16A085; }
+
+
+
+/* ============================================================
+   RESPONSIVE: DOWNLOAD BANNERS
+   ============================================================ */
+@media (max-width: 768px) {
+    .download-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .download-text {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .download-botones,
+    .download-banner a {
+        width: 100%;
+    }
+
+    .download-btn,
+    .github-btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+
+
+/* ============================================================
+   MODAL: HOW TO CITE
+   ============================================================ */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1000;
+}
+.modal:target { display: block; }
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 32px;
+    color: #aaa;
+}
+.close:hover { color: #000; }
+
+.bibtex-entry {
+    background-color: #f4f4f4;
+    border-left: 4px solid #3498DB;
+    padding: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    font-size: 14px;
+    margin: 20px 0;
+    color: #333;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    text-align: center;
+    background-color: #34495E;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+/* ============================================================
+   MEDIA QUERIES
+   ============================================================ */
+/* @media (max-width: 768px) { */
+    /* header { */
+        /* height: 100px; */
+        /* padding: 20px 10px; */
+		/* font-size: 15px; */
+    /* } */
+    /* nav { flex-direction: column; text-align: center; } */
+    /* nav a { display: block; padding: 10px; } */
+    /* section { width: 90%; } */
+    /* .social-icons a { font-size: 20px; } */
+/* } */
+
+@media (max-width: 768px) {
+    header {
+        height: 100px;
+        padding: 20px 10px;
+        font-size: 15px;
+    }
+    nav { flex-direction: column; text-align: center; }
+    nav a { display: block; padding: 10px; }
+
+    section {
+        width: 100%;
+        padding: 0 12px;
+        margin: 20px 0;
+    }
+
+    .social-icons a { font-size: 20px; }
+}
+
+
+/* ============================================================
+   ABOUT ME
+   ============================================================ */
+
+
+
+/* El contenedor se adapta únicamente al alto de lo que tenga dentro (el texto) */
+.about-container {
+    display: flex;
+    gap: 40px;           /* Espacio entre texto e imagen */
+    align-items: stretch; 
+}
+
+/* El texto define la altura de toda la sección */
+.about-text {
+    flex: 1;
+	text-align: justify;
+}
+
+/* El contenedor de la imagen adopta el alto del texto, pero le fijamos un ancho */
+.about-image {
+    flex: 0 0 250px;     /*  ancho ideal foto */
+    position: relative;  /* Necesario para que la imagen se guíe por este recuadro */
+	justify-content: center; /* <--- Centra la imagen horizontalmente */
+    align-items: center;     /* <--- Centra la imagen verticalmente */
+}
+
+/* La imagen se acopla perfectamente al espacio resultante */
+.profile-pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+	margin: auto;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;   /* Llena todo el alto del texto y recorta estéticamente los lados si sobra foto */
+    border-radius: 6px; /* Esquinas redondeadas */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container { flex-direction: column; }
+    .about-image img { max-width: 50%; }
+}
+
+
+/* ============================================================
+   ARTÍCULOS RELACIONADOS (CUADROS CLICABLES)
+   ============================================================ */
+
+.related-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Cada artículo: el cuadro entero es el enlace */
+.related-article-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #eef3f8; /* gris azulado */
+    border-left: 4px solid #3498DB; /* azul principal */
+    border-radius: 6px;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: #2C3E50;
+    font-weight: 500;
+    font-size: 13px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Icono pequeño */
+.related-article-card img {
+    width: 18px;
+    height: 18px;
+    opacity: 0.85;
+    flex-shrink: 0;
+}
+
+/* Efecto hover */
+.related-article-card:hover {
+    background-color: #dceaf7; /* azul más claro */
+    transform: translateX(1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    color: #2980B9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .related-article-card {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+    .related-article-card img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+
+/* ============================================================
+   SECCIÓN DE PUBLICACIONES (CARDS)
+   ============================================================ */
+.publication-section { margin-bottom: 30px; }
+.publication-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background-color: #eef3f8;
+    border-left: 4px solid #3498DB;
+    border-radius: 4px;
+}
+.publication-note {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Card de publicación */
+.publication-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.publication-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+.publication-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin-bottom: 6px;
+}
+
+.publication-comment {
+    font-size: 16px;
+    font-weight: 600;
+    color: #E67E22;
+    margin-bottom: 6px;
+}
+
+.pub-status {
+    background-color: #E67E22;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    margin-left: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.publication-translation {
+    font-style: italic;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.publication-authors,
+.publication-journal {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.publication-links { margin-top: 8px; }
+.publication-links a {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    background-color: #3498DB;
+    padding: 4px 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+
+.publication-links a:hover { background-color: #2980B9; }
+
+.publication-links a.pub-link-gray {
+    background-color: #aeafb0;
+}
+.publication-links a.pub-link-gray:hover {
+    background-color: #919191;
+}
+
+
+.publication-links {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+
+
+/* ============================================================
+   INFO BOX (imagen + texto estilo publication-heading)
+   ============================================================ */
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #eef3f8; /* mismo fondo que publication-heading */
+    border-left: 4px solid #3498DB;
+    border-radius: 6px;
+    padding: 12px 15px;
+    margin: 25px 0;
+}
+
+
+.info-box.orange {
+    background-color: #fdf2e9;   /* fondo suave naranja */
+    border-left: 4px solid #E67E22;  /* tu naranja principal */
+}
+
+/* Imagen */
+.info-box img {
+    width: 38px;   /* antes 80px → reduce aquí */
+    height: auto;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+/* Texto */
+.info-box p {
+    font-size: 16px; /* mismo tamaño que tu texto normal */
+    margin: 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .info-box {
+        flex-direction: row;   /* ← NO lo pongas en columna */
+        text-align: left;
+    }
+}
+/* ============================================================
+   VIDEO CONTAINER
+   ============================================================ */
+
+
+.video-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 95%;
+    border-radius: 8px;
+}
+
+
+/* ============================================================
+   FUNDING (variante vertical)
+   ============================================================ */
+.case-study-funding {
+    margin-top: 2px;
+    padding: 15px;
+    text-align: left;
+}
+
+.case-study-funding p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+/* Imagen más grande y debajo */
+.case-study-funding img {
+    width: 300px;   /* ajusta según logo */
+    height: auto;
+    margin: 5px 0;
+}
+
+
+@media (max-width: 768px) {
+    .case-study-funding img {
+        width: 180px;
+    }
+}

@@ -1,7 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jorge Vicente</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+</head>
+
+	
+
 <body>
-<h1>Hola mundo</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<header class="principal-header">
+    <h1>Jorge Vicente</h1>
+    <p>PhD Student</p>
+</header>
+
+<nav class="principal-nav">
+    <a href="#biografia">About me</a>
+	<a href="#proyectos">Projects</a>
+    <a href="#publicaciones">Publications</a>
+
+</nav>
+
+<div class="social-icons">
+        
+		<a href="https://www.linkedin.com/in/jrgvicente" target="_blank">
+        <img src="images/icons/linkedin.svg" alt="LinkedIn" /> </a>
+		
+		<a href="https://github.com/jrgvicente" target="_blank">
+        <img src="images/icons/github.svg" alt="Github" /> </a>
+		
+		<a href="https://scholar.google.com/citations?user=gErUJucAAAAJ&hl=en" target="_blank">
+        <img src="images/icons/gscholar.svg" alt="Google Scholar" /> </a>
+		
+		<a href="https://orcid.org/0009-0001-3833-7974" target="_blank">
+        <img src="images/icons/orcid.svg" alt="ORCID" /> </a>
+		
+		<a href="https://www.researchgate.net/profile/Jorge-Vicente-Martinez-2" target="_blank">
+        <img src="images/icons/RG.svg" alt="RG" /> </a>
+    
+
+    </div>
+
+
+<section id="biografia" class="about-me">
+    <h2>About me</h2>
+    <hr>
+    <div class="about-container">
+        <div class="about-text">
+            <p>
+                Hi! I am a PhD Student in the 
+                <a href="https://ropert.i3a.es/" target="_blank">ROPERT group</a> 
+                (Robotics, Computer Vision and Artificial Intelligence) at the 
+                Engineering Research Institute of Aragón (University of Zaragoza, Spain), supervised by <a href="https://webdiis.unizar.es/~ramirlab/" target="_blank">Édgar Ramírez-Laboreo</a>.
+            </p>
+            <br>
+            <p>
+                I received the B.S. Degree in Industrial Technologies Engineering in 2022, and the M.S. degree in Industrial Engineering in 2024 from the University of Zaragoza, Zaragoza, Spain, where I am presently working toward the Ph.D. degree in Systems Engineering and Computer Science. My current research interests include modeling, estimation, optimization, and control of mechatronics and electromechanical systems.
+            </p>
+            <br>
+            <p>
+                You can contact me at: 
+                <a href="mailto:j.vicente@unizar.es" target="_blank">j.vicente@unizar.es</a>
+            </p>
+        </div>
+
+        <!-- Aquí va tu nueva imagen vertical sin enlace -->
+        <div class="about-image">
+            <img src="images/jorge_foto.jpg" alt="J.Vicente" class="profile-pic">
+        </div>
+    </div>
+</section>
+
+<section id="proyectos">
+    <h2>Projects</h2>
+    <hr>
+	
+	<div class="projects">
+    
+	<div class="project-card">
+        <a href="Grua3D_trajectories.html" class="project-title">Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance<span class="project-status ongoing">ongoing</span></a>
+        <div class="project-content">
+            <div class="project-image">
+                 <a href="Grua3D_trajectories.html"> <img src="images/proyecto3DCrane_trayectorias.png" alt="trajectories proj. image"> </a>
+            </div>
+            <div class="project-summary">
+                <p>In this work, we present a time-optimal trajectory generation method for 3D overhead cranes using differential flatness. Our approach incorporates complex physical constraints like nonlinear friction and collision avoidance for both the payload and rope. We demonstrate that modeling friction is crucial for avoiding actuator saturation and collisions, ensuring fast, safe, and reliable crane operations.</p>
+				
+				
+			<div class="project-links">
+			<a href="Grua3D_trajectories.html" class="project-pill">WEB</a>
+			<a href="#trayectoriasPG_art" class="project-pill">PREPRINT</a>					
+			</div>
+				
+		
+            </div>
+        </div>		
+		
+    </div> 
+	
+	
+	
+	
+	<div class="project-card">
+        <a href="Grua3D_model.html" class="project-title">A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction<span class="project-status ongoing">ongoing</span></a>
+        <div class="project-content">
+			
+			<div class="project-video">
+				<video autoplay loop muted playsinline>
+					<source src="videos/crane_model_video1.mp4" type="video/mp4">
+					Your browser does not support HTML5 video.
+				</video>
+			</div>
+			
+			
+			
+            <div class="project-summary">
+                <p>This paper presents a new approach to accurately simulating 3D overhead cranes with friction. Although nonlinear friction dynamics has a significant impact on these systems, accurately modeling this phenomenon in simulations is a significant challenge. Furthermore, we present a step-by-step algorithm for the comprehensive estimation of all unknown system parameters, including friction. This methodology is based on Bayesian Linear Regression and Least Squares (LS) estimations.</p>
+				
+				
+				<div class="project-links">
+				<a href="Grua3D_model.html" class="project-pill">WEB</a>
+				<a href="https://github.com/jrgvicente/Crane3DSim" target="_blank" rel="noopener noreferrer" class="project-pill">GITHUB</a>	
+				<a href="#modeladoPG_art" class="project-pill">PREPRINT</a>					
+				</div>
+				
+		
+            </div>
+        </div>		
+		
+    </div> 
+	
+		
+
+
+	<div class="project-card">
+			<a href="NNparameter.html" class="project-title">Parameter estimation in low-cost devices using neural networks</a>
+			<div class="project-content">
+				<div class="project-image">
+					<a href="NNparameter.html"> <img src="images/proyectoRedes1.png" alt="Parameter estimation image"> </a>
+				</div>
+				<div class="project-summary">
+					<p>This work introduces a neural network-based approach for the rapid and automated estimation of parameters in nonlinear physical systems.  It addresses the challenge of manufacturing variability in mass-produced low-cost devices, where physical tolerances can lead to significant differences between individual units, complicating modeling and control.  The proposed method uses convolutional layers to process temporal signals, extracting relevant features, and dense layers to calculate the system's parameters.  This approach enables efficient parameter estimation from a single experiment, offering advantages in industrial settings where speed and automation are critical.</p>
+					
+				<div class="project-links">
+					<a href="NNparameter.html" class="project-pill">WEB</a>			
+				</div>
+						
+					
+					
+					
+				</div>
+			</div>		
+			
+		</div>
+
+
+
+	<div class="project-card">
+			<a href="Microfluidics.html" class="project-title">Dynamic modeling, parameter estimation and predictive control of a microfluidic system</a>
+			
+			<div class="project-content">
+				<div class="project-image">
+					<a href="Microfluidics.html"> <img src="images/proyectoMF.png" alt="Microfluidics project image"> </a>
+				</div>
+				<div class="project-summary">
+					<p>This work tackles the challenge of precisely controlling fluid flow in microfluidic systems, essential tools in diverse scientific domains. It presents a model predictive controller (MPC) for accurate regulation and addresses the need for adaptability by exploring techniques to estimate key system parameters. This allows the MPC to adjust to changes, such as different fluids, with the research demonstrating system identifiability and implementing noise mitigation, validated experimentally to confirm effective parameter estimation and controller updates.</p>
+								
+
+				
+				<div class="project-links">
+					<a href="Microfluidics.html" class="project-pill">WEB</a>					
+					<a href="#MF_RIAI24" class="project-pill">PAPER</a>
+				</div>
+								
+				
+				
+				</div>
+			</div>		
+			
+		</div>
+
+
+   
+</div>
+</section>
+
+
+
+<section id="publicaciones">
+  <div class="publicaciones">
+    <h2>Publications</h2>
+    <hr>
+
+    <!-- Work in progress -->
+    <div class="publication-section">
+      <h3 class="publication-heading">Work in progress</h3>
+      <p class="publication-note">Papers that have not yet been peer-reviewed or are currently under review</p>
+
+      <div class="publication-card" id="modeladoPG_art">
+        <h4 class="publication-title">
+          Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance 
+          <!--<span class="pub-status">PREPRINT</span>-->
+        </h4>
+		
+		<h4 class="publication-comment">
+          Accepted for presentation at the 23rd IFAC World Congress 2026 in Busan, Korea. 
+          <!--<span class="pub-status">PREPRINT</span>-->
+        </h4>
+		
+        <p class="publication-authors">J. Vicente-Martinez and E. Ramirez-Laboreo.</p>
+        <div class="publication-links">          
+          <a href="https://doi.org/10.5281/zenodo.17507581" target="_blank" class="pub-link">Zenodo</a>
+		  <a href="https://arxiv.org/abs/2510.24457" target="_blank" class="pub-link">Arxiv</a>
+		  <a href="#cite_Crane2" class="pub-link pub-link-gray">How to cite</a>
+        </div>
+      </div>
+	  
+		<div class="publication-card" id="trayectoriasPG_art">
+        <h4 class="publication-title">
+          A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction 
+          <!--<span class="pub-status">PREPRINT</span>-->
+        </h4>
+        <p class="publication-authors">J. Vicente-Martinez and E. Ramirez-Laboreo.</p>
+        <div class="publication-links">
+          <a href="https://doi.org/10.5281/zenodo.17043987" target="_blank" class="pub-link">Zenodo</a>
+          <a href="https://www.arxiv.org/abs/2509.13330" target="_blank" class="pub-link">Arxiv</a>
+		  <a href="#cite_Crane1" class="pub-link pub-link-gray">How to cite</a>
+        </div>
+      </div>
+	  
+	  
+    </div>
+	
+	
+
+    <!-- Journal papers -->
+    <div class="publication-section">
+      <h3 class="publication-heading">Journal papers</h3>
+
+      <div class="publication-card" id='MF_RIAI24'>
+        <h4 class="publication-title">
+          Dynamic modeling and predictive control of a microfluidic system
+        </h4>
+        <p class="publication-translation">[Modelado dinámico y control predictivo de un sistema microfluídico]</p>
+        <p class="publication-authors">J. Vicente Martínez, É. Ramírez Laboreo, and P. Calderón Gil.</p>
+        <p class="publication-journal">
+          Revista Iberoamericana de Automática e Informática Industrial, vol. 21, no. 3, pp. 231-242, Jun. 2024.
+        </p>
+		<div class="publication-links">
+		  <a href="https://doi.org/10.4995/riai.2024.19953" target="_blank" class="pub-link">Published (ESP)</a>
+		  <a href="https://doi.org/10.48550/arXiv.2402.09493" target="_blank" class="pub-link">Translation (ENG)</a>
+		  <a href="#cite_MF" class="pub-link pub-link-gray">How to cite</a>
+		</div>
+      </div>
+    </div>
+	
+	    <!-- Conference papers -->
+    <div class="publication-section">
+      <h3 class="publication-heading">Conference papers</h3>
+
+      <div class="publication-card" id='redes_SIME25'>
+        <h4 class="publication-title">
+          Parametric estimation in low-cost devices using neural networks
+		   <!--<span class="pub-status">SIME 2025</span>-->
+        </h4>
+        <p class="publication-translation">[Estimación paramétrica en dispositivos de bajo coste mediante redes neuronales]</p>
+        <p class="publication-authors">Vicente Martínez, J., Prats Mindán, M., Moya Lasheras, E., Ramírez Laboreo, É., Blasco Rueda, N.</p>
+        <p class="publication-journal">
+          Actas del I Simposio CEA de los GT: Ingeniería de Control - Modelado, Simulación y Optimización - Educación en Automática. Sevilla, España. 2025
+        </p>
+        <div class="publication-links">
+          <a href="pdfs/SIME25_redes.pdf" target="_blank" class="pub-link">PDF (ESP)</a>
+		  <a href="https://eventos.us.es/125633/section/56356/i-simposio-conjunto-de-los-grupos-tematicos-de-cea-de-ingenieria-de-control-de-modelado-simulacion-.html" target="_blank" class="pub-link pub-link-gray">Symposium web page</a>
+		  <a href="#cite_SIME25" class="pub-link pub-link-gray">How to cite</a>          
+        </div>
+      </div>
+    </div>
+	
+	
+  </div>
+</section>
+
+<!-- HOW TO CITE -->	
+
+<!-- MF -->	
+<div id="cite_MF" class="modal">
+  <div class="modal-content">
+	<a href="#" class="close">&times;</a>
+	<h3>Dynamic modeling and predictive control of a microfluidic system</h3>
+	<p>BibTeX cite</p>
+<pre class="bibtex-entry">
+@article{vicentemartinez2024microfluidics,
+	title={Dynamic modeling and predictive control of a microfluidic system},
+	author={Vicente-Martinez, J. and Ramirez-Laboreo, E. and Calderon-Gil, P.},
+	journal={Revista Iberoamericana de Automática e Informática industrial},
+	volume={21},
+	number={3},
+	pages={231--242},
+	year={2024},
+	doi={10.4995/riai.2024.19953}
+}
+</pre>
+			  </div>
+</div>
+
+<!-- 3dCRANE -->
+			<div id="cite_Crane1" class="modal">
+			  <div class="modal-content">
+				<a href="#" class="close">&times;</a>
+				<h3>A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction</h3>
+				<p>BibTeX cite</p>
+<pre class="bibtex-entry">
+@misc{vicentemartinez2026hybriddynamicmodelparameter,
+      title={A hybrid dynamic model and parameter estimation method for accurately simulating overhead cranes with friction}, 
+      author={Jorge Vicente-Martinez and Edgar Ramirez-Laboreo},
+      year={2026},
+      eprint={2509.13330},
+      archivePrefix={arXiv},
+      primaryClass={eess.SY},
+      url={https://arxiv.org/abs/2509.13330}, 
+}
+</pre>
+			  </div>
+			</div>
+
+<!-- SIME25 -->
+			<div id="cite_SIME25" class="modal">
+			  <div class="modal-content">
+				<a href="#" class="close">&times;</a>
+				<h3>Parametric estimation in low-cost devices using neural networks</h3>
+				<p>BibTeX cite</p>
+<pre class="bibtex-entry">
+@inproceedings{martinez2025parametric,
+  author    = {Vicente Martínez, J. and Prats Mindán, M. and Moya Lasheras, E. and Ramírez Laboreo, É. and Blasco Rueda, N.},
+  title     = {Parametric estimation in low-cost devices using neural networks},
+  booktitle = {Actas del I Simposio CEA de los GT: Ingeniería de Control - Modelado, Simulación y Optimización - Educación en Automática},
+  year      = {2025},
+  address   = {Sevilla, España},
+}
+
+</pre>
+			  </div>
+			</div>
+			
+			
+<!-- 3dCRANE_trayectorias -->
+			<div id="cite_Crane2" class="modal">
+			  <div class="modal-content">
+				<a href="#" class="close">&times;</a>
+				<h3>Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance</h3>
+				<p>BibTeX cite</p>
+<pre class="bibtex-entry">
+@misc{vicentemartinez2025flatnessbasedtrajectoryplanning3d,
+      title={Flatness-based trajectory planning for 3D overhead cranes with friction compensation and collision avoidance}, 
+      author={Jorge Vicente-Martinez and Edgar Ramirez-Laboreo},
+      year={2025},
+      eprint={2510.24457},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2510.24457}, 
+}
+</pre>
+			  </div>
+			</div>			
+			
+
+<footer>
+    <p>Jorge Vicente | &copy; 2026</p>
+</footer>
+
 </body>
 </html>
