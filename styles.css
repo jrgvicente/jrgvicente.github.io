@@ -339,6 +339,101 @@ ul li a:hover { text-decoration: underline; }
 
 
 /* ============================================================
+   TARJETAS DE TEACHING
+   ============================================================ */
+
+
+.teaching {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tarjeta de proyecto */
+.teaching-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teaching-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado: Imagen + Título */
+.teaching-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+/* Imagen cuadrada y pequeña */
+.teaching-image {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.teaching-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Título */
+.teaching-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+
+.teaching-title:hover {
+    color: #3498DB;
+}
+
+/* Contenido con bullet points */
+.teaching-summary {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.teaching-summary li {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+.teaching-summary li:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+	    .teaching-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+
+
+
+/* ============================================================
    PUBLICACIONES
    ============================================================ */
 .publication { margin-bottom: 20px; }
