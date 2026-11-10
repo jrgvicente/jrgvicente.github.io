@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Vicente | Sliding drones</title>
+    <link rel="stylesheet" href="styles.css">
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Roboto+Slab:wght@600&family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+
+	
+</head>
+<body>
+
+
+
+
+<section class="case-study-detail">
+    <h2 class="case-study-title">Sliding into Balance: Benefits of a Sliding Payload for Load Distribution and Disturbance Rejection in Dual-UAV Transportation</h2>
+    
+
+
+	<div class="case-study-authors">
+    <span>
+        <a href="index.html">
+            J. Vicente Martínez
+        </a> <sup>1</sup>
+    </span>
+    <span>
+        
+            F.J. Mañas Álvarez
+        </a> <sup>2</sup>
+    </span>
+	<span>
+        <a href="https://webdiis.unizar.es/~ramirlab/" target="_blank" rel="noopener noreferrer">
+            É. Ramírez Laboreo
+        </a> <sup>1</sup>
+    </span>
+</div>
+	
+	<div class="case-study-authors-afiliaciones">
+        <i>1. Departamento de Informática e Ingeniería de Sistemas (DIIS) e Instituto de Investigación en Ingeniería de Aragón (I3A), Universidad de Zaragoza</i> <br> 
+		<i>2. Departamento de Informática y Automática, Universidad Nacional de Educación a Distancia (UNED)</i> <br>         
+    </div>
+	
+	
+	
+	 <div class="download-banner">
+    <div class="download-text">
+        <p>
+            Vicente-Martinez, J., Mañas-Álvarez F.J. and Ramirez-Laboreo, E. (2026) 
+            <strong>Sliding into Balance: Benefits of a Sliding Payload for Load Distribution and Disturbance Rejection in Dual-UAV Transportation.</strong> 
+            <i>Arxiv</i>
+			
+			
+			<p>
+				<i><a href="#cite2">How to cite</a></i>
+			</p>
+			
+			<!-- Modal -->
+			<div id="cite2" class="modal">
+			  <div class="modal-content">
+				<a href="#" class="close">&times;</a>
+				<h3>Sliding into Balance: Benefits of a Sliding Payload for Load Distribution and Disturbance Rejection in Dual-UAV Transportation</h3>
+				<p>BibTeX cite</p>
+<pre class="bibtex-entry">
+@misc{vicentemartinez2026slidingbalancebenefitssliding,
+      title={Sliding into Balance: Benefits of a Sliding Payload for Load Distribution and Disturbance Rejection in Dual-UAV Transportation}, 
+      author={Jorge Vicente-Martinez and Francisco José Mañas-Álvarez and Edgar Ramirez-Laboreo},
+      year={2026},
+      eprint={2611.12754},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2611.12754}, 
+}
+</pre>
+			  </div>
+			</div>
+			
+			
+        </p>
+    </div>
+    <div class="download-botones">
+	
+	<a href="https://arxiv.org/abs/2611.12754" target="_blank" class="download-btn" download>Preprint [ENG]</a> <br>	 
+	</div>
+</div>
+		
+	
+
+
+
+		 	<div class="video-container">
+			<video autoplay loop muted playsinline controls>
+				<source src="videos/dron_desliza_detalle.mp4" type="video/mp4">
+				Tu navegador no soporta vídeo HTML5.
+			</video>
+			</div>		
+		
+		<h3 class="case-study-subtitle">Abstract</h3>
+		
+		<div class="resumen-proyecto">        
+		<p>This paper analyzes the cooperative transportation of a payload suspended from two drones in which, instead of being attached to two independent ropes, <b>the payload is allowed to slide along a single rope connecting both UAVs</b>. First, a planar nondimensional dynamical model of the sliding motion with viscous friction is presented. Then, considering stationary drones, this configuration is compared with a fixed payload with the same total rope length, both at equilibrium and under disturbances. The analytical results show that the sliding payload <b>equalizes the tension</b> in both rope segments for any relative position of the drones, so that no rope loses tension at equilibrium; it <b>doubles the region reachable by the payload</b> and, except for low friction combined with a large drone separation, it <b>enlarges the set of admissible disturbances</b>. Finally, a dynamic simulation also shows that under realistic gusty wind profiles, the average tension imbalance between the drones is reduced with respect to the fixed-payload solution.
+		</p>
+	</div>
+
+	   
+
+
+
+
+<h3 class="case-study-subtitle">Idea</h3>
+
+<div class="resumen-proyecto">
+        <p>The idea of this work is to analyze, as a proof of concept, the effects of letting the payload slide along a single rope connecting both drones versus attaching it to two ropes with the same total length. Our objective is to see the sliding payload's effect on static and dynamic behavior by evaluating rope tensions and drone reaction forces at equilibrium and under payload disturbances.
+		The transport of cargo suspended by ropes using drones is a topic currently under investigation, due to its advantages in distributing cargo among different drones and reaching areas that a drone carrying the cargo directly could not access. However, the most commonly used configuration today involves securing the payload with separate ropes for each drone. <b>In this paper, we present a model in which there is only one rope and the payload can slide along it, taking into account the friction involved in that sliding motion</b>.
+		</p>
+       </div>
+
+	<div class="case-study-gallery1">
+		<img src="images/SlidingDrones/esquema_modelo_slidingdrones.png" alt="Sliding Drones Model">
+	</div>
+
+
+
+<h3 class="case-study-subtitle">Steady-State Analysis</h3>
+
+<div class="resumen-proyecto">
+    <p>
+        To understand the fundamental behavior of this setup, we first evaluated the system at steady state without external forces. The comparison with traditional fixed cables revealed three major breakthroughs:
+    </p>
+    
+    <ul style="list-style-type: disc; padding-left: 25px; margin-top: 15px;">
+        <li style="margin-bottom: 10px;">
+            <strong>Automatic 50/50 Load Balance:</strong> The payload naturally slides to the lowest point of the cable elipse, guaranteeing equal tensions (T<sub>1</sub> = T<sub>2</sub>) across any formation geometry.
+In contrast, with the fixed payload, the tensions are in general unequal and one rope loses tension whenever drone 2 lies inside either of the two half discs of radius 1/2 centered at
+(0,± 1/2) (dotted lines).
+        </li>
+        <li style="margin-bottom: 10px;">
+            <strong>Double the Reach:</strong> We doubled the payload's reachable workspace (from &pi;/8 to &pi;/4) while maintaining full structural stability across the entire area. With the fixed payload, the payload lies at a distance 1/2 from drone 1 when both ropes are taut. When a rope is slack, the payload hangs from one drone, which fills the half disc of radius 1/2.
+        </li>
+        <li style="margin-bottom: 10px;">
+            <strong>Smarter Battery Sharing:</strong> With the sliding payload, the equal tensions lead to forces of equal magnitude on both drones, with the same vertical component 1/2 and opposite horizontal components. For identical drones, this means a balanced load, so that neither battery would run out before the other. With a fixed payload, unequal forces can cause each drone to make a different effort, resulting in faster battery drain. Furthermore, in the slack zone, a single drone bears the entire weight of the payload, while the other bears none.
+        </li>
+    </ul>
+</div>
+
+
+	<div class="case-study-gallery1">
+		<img src="images/SlidingDrones/drone_positions.png" alt="Sliding Drones Model">
+	</div>
+
+
+
+
+<h3 class="case-study-subtitle">Response to Disturbances</h3>
+
+<div class="resumen-proyecto">
+    <p>
+        To analyze the response of both systems to step-type disturbances, we applied disturbances to both axes and observed the distribution of tensions and the influence of load sliding friction on the time it takes to reach steady state. 
+		<br><br>
+		For both systems, we analyzed the magnitude of the <b>disturbances they can withstand without losing tension in the ropes</b>. To analyze this, we simulate the system's response to a step disturbance input for different geometric configurations. For each of these configurations, 160,000 combinations of disturbances are applied, and we analyze—for each simulation—whether the ropes remain taut, whether any of them lose tension, or, in the case of the sliding configuration, whether the load reaches the end of the lower semiellipse. 
+		<br><br>
+		Low friction increases the risk of the payload sliding so far that it reaches the end of the lower semiellipse, while very high friction brings the system closer to the behavior of a fixed payload. Except for very low friction combined with large disturbances and a large separation between the drones, the region of admissible disturbances is larger with the sliding payload. In that exception, the payload slides so much that it reaches the end of the lower semiellipse for disturbances that a fixed payload would withstand.
+    </p>
+    
+</div>
+
+
+	<div class="case-study-gallery1">
+		<img src="images/SlidingDrones/disturbancesDrones.png" alt="Sliding Drones Model">
+	</div>
+
+<h3 class="case-study-subtitle">Wind gust simulation</h3>
+
+<div class="resumen-proyecto">
+    <p>The simulation results (similar to those shown in the video at the top of this page) demonstrate how allowing the load to reposition itself along the rope helps better balance the tensions in each rope and, consequently—if the drones are identical—better distribute the power each one must exert. 
+	<br><br>
+	In summary, this study highlights three advantages of the sliding configuration over the fixed one:</p>
+	
+	   <ul style="list-style-type: disc; padding-left: 25px; margin-top: 15px;">
+        <li style="margin-bottom: 10px;">
+            <strong>Balancing Tensions</strong> Passive payload relocation equalizes tension in both rope segments, balancing drone forces and—for identical drones—battery consumption. This advantage is particularly important when drones are not at the same altitude—for example, to avoid an obstacle.
+        </li>
+        <li style="margin-bottom: 10px;">
+            <strong>It withstands greater disturbances</strong> The sliding setup withstands a larger set of constant disturbances without tension loss, except under very low friction with large drone separation, where the payload reaches the end of the lower semiellipse.
+        </li>
+        <li style="margin-bottom: 10px;">
+            <strong>Reachable region</strong> When the relative position of the drones changes (e.g., when only one of them moves), the region reachable by the payload is twice as large with the sliding configuration, and both ropes remain taut for any drone position, whereas with the fixed payload one rope loses tension in part of the space..
+        </li>
+    </ul>
+	
+	<br><br>
+	<p>Drawbacks of the sliding configuration include payload shifting along the cable, meaning its location is no longer purely geometric and requires controllers to use a more complex model incorporating friction. Additionally, this analysis simplified the system by neglecting dry friction.</p>
+	<br><br>
+	Future work will extend this analysis to 3D, incorporate drone dynamics, control, and trajectory planning, study active friction regulation (e.g., via a payload brake) to dynamically select the optimal friction level, and experimentally validate the results.
+	</p>
+
+    
+
+</div>
+
+
+
+
+
+
+&nbsp
+	
+<hr>
+<div class="case-study-funding">
+    <p>
+        This work is part of the projects NoRMMAS PID2024-159279OB-I00, COLLECTIVELY PID2022-139187OB-I00 and GO-HYBRID PID2024-156427OB-I00 funded by
+    </p>
+
+    <img src="images/logos/MICIU+Cofinanciado+AEI.jpg" alt="Funding logo">
+
+    <p>
+      It was founded also in part by the MICIU through the grant FPU24/01878, in part by the Government of Aragón - EU, via grant T77_26R.
+</div>	
+
+
+</section>
+
+
+<footer>
+    <p>Jorge Vicente | &copy; 2026</p>
+</footer>
+
+</body>
+</html>
+
+
